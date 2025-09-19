@@ -4,7 +4,7 @@ import google.generativeai as genai
 import os
 import streamlit as st
 from pdfextractor import text_extractor_pdf
-from docxexctractor import text_extracor_docx
+from docxexctractor import text_extratcor_docx
 from imageextractor import extract_text_image
 
 # Configure the Model
