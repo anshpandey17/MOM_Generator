@@ -4,7 +4,7 @@ import google.generativeai as genai
 import os
 import streamlit as st
 from pdfextractor import text_extractor_pdf
-from docxexctracor import text_extracor_docx
+from docxexctractor import text_extracor_docx
 from imageextractor import extract_text_image
 
 # Configure the Model
@@ -25,7 +25,7 @@ if user_file:
   if user_file.type == 'application/pdf':
     user_text = text_extractor_pdf(user_file)
   elif user_file.type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
-    user_text = text_extracor_docx(user_file)
+    user_text = text_extractor_docx(user_file)
   elif user_file.type in ['image/jpg','image/jpeg','image/png']:
     user_text = extract_text_image(user_file)
 
